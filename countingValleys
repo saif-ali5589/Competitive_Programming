@@ -1,0 +1,22 @@
+def countingValleys(n, s):
+    l=[]
+    count =0
+    for i in range(n):
+        if s[i]=='U':
+            count +=1
+            l.append(count)
+        elif s[i]=='D':
+            count -=1
+            l.append(count)
+    temp =0
+    #print(l)
+    temp1=0
+    for i in range(len(l)):
+        if l[i]>=0:
+            temp1=0
+            continue
+        elif l[i]<0:
+            if temp1==0:
+                temp+=1
+                temp1 +=1
+    return temp
