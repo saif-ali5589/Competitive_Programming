@@ -1,0 +1,26 @@
+T = int(input())
+while T>0:
+    T -=1
+    S,N = map(int,input().split())
+    if S>N:
+        if S%N!=0:
+            #print(S//N)
+            l=S//N
+            m=S%N
+            if m%2==0:
+                print(l+1)
+            elif m==1:
+                print(l+1)
+            else:
+                print(l+2)
+        else:
+            print(S//N)
+    elif S==N:
+        print(1)
+    elif S<N:
+        if S==1:
+            print(1)
+        elif S%2==0:
+            print(1)
+        else:
+            print(2)
